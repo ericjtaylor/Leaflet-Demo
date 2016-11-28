@@ -1,0 +1,32 @@
+---
+title: "Leaflet Demo"
+author: "Eric Taylor"
+date: "November 27, 2016"
+output: html_document
+---
+
+## Where can you find the world's largest lobster?
+
+```{r echo=FALSE}
+library(leaflet)
+
+my_icon <- makeIcon(
+    iconUrl = "http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/yellow-road-sign-icons-animals/016015-yellow-road-sign-icon-animals-animal-lobster.png",
+    iconWidth = 100, iconHeight = 100
+)
+
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addMarkers(
+        lat=46.218728,
+        lng=-64.555029,
+        icon = my_icon,
+        popup = "World's Biggest Lobster")
+my_map
+```
+
+## What is it all about?
+
+The World's Largest Lobster is a concrete and reinforced steel statue by Canadian artist Winston Bronnum. The statue is 11 metres long and 5 metres tall, weighing 90 tonnes. The sculpture was commissioned by the Shediac Rotary Club as a tribute to the town's lobster fishing industry. The sculpture took three years to complete at a cost of $170,000. It attracts 500,000 visitors per year.
+
+## Now you know.
